@@ -1,0 +1,47 @@
+<div style="width:700px;margin: 0px auto;">
+<table width="700" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr> 
+    <td align="center" style="padding: 10px 0px;"><img src="{$tpl_path}img/logo.gif?t={$smarty.now}" /></td>
+  </tr>
+  <tr> 
+    <td style="font-size:14px;text-transform:uppercase;padding:10px 5px;border-top: 1px dotted #999;border-bottom: 1px dotted #999;">
+      <font face="Tahoma, Verdana, sans-serif">Neuer RMA-Auftrag</font>
+    </td>
+  </tr>
+  <tr> 
+    <td>
+      <br />
+      <table width="100%" border="0" cellspacing="0" cellpadding="5">
+        <tr>
+          <td valign="top">
+            <font size="2" face="Tahoma, Verdana, sans-serif">Sehr geehrter Administrator,<br />
+            <br />
+			es ist ein neuer RMA-Auftrag eingegangen.
+			<br /><br />
+			--------------------------------------------<br />
+			Kunde: {$CUSTOMER_NAME}<br />
+			ID: {$CUSTOMER_ID}<br />
+			Email: {$CUSTOMER_EMAIL}<br />
+			--------------------------------------------<br /><br />
+			
+			Betrifft Bestellung-Nr: BID-{$CUSTOMER_ORDER_ID}<br /><br />
+			
+			Produkt-ID: {$CUSTOMER_ORDER_PRODUCT_ID}<br />
+			Produktbezeichnung: {$CUSTOMER_ORDER_PRODUCT_NAME}<br /><br />
+			
+			Grund der Reklamation: {$CUSTOMER_REASON}<br /><br />
+			Fehlerbeschreibung:<br />
+			--------------------------------------------<br />
+			{$CUSTOMER_ERROR}<br />
+			--------------------------------------------<br /><br />
+			
+			Eine genaue Auflistung aller Angaben finden Sie in der Administration.
+            </font>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+[SIGNATUR]

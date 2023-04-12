@@ -1,0 +1,42 @@
+﻿{config_load file="lang_`$language`_rma.custom"}
+
+<h1>{#heading_rma#}</h1>
+
+<div class="twoColums">
+  <div class="highlightbox">
+    <h4>{#text_heading_success_rma#}</h4>
+    {if !$rma_content}
+      <p>{#text_no_content#}</p>
+    {else}
+      <table class="rma_box">
+        <tr class="header">
+          <td>{#text_rma_number#}</td>
+          <td>{#text_rma_date#}</td>
+          <td>{#text_rma_status#}</td>
+        </tr>
+        {foreach name=rma item=data from=$rma_content}
+        <tr class="row">
+          <td>{$data.RMA_ID}</td>
+          <td>{$data.RMA_DATE}</td>
+          <td><strong>{$data.RMA_STATUS}</strong></td>
+        </tr>
+        {/foreach}
+      </table>
+    {/if}
+  </div>
+</div>
+<div class="twoColums last">
+  <div class="highlightbox">
+    <h4>{#text_first#}</h4>
+    <p>{#text_second#} {#text_step2_first#}</p>
+	{$FORM_ACTION}
+	<h4 class="detailbox">{#text_step2_second#}</h4>
+	<table>
+	  <tr>
+	    <td colspan="2"><span class="fieldtext">{#text_choose#}</span><span>{$CHOOSE_ORDER_ID}</span></td>
+	  </tr>
+	</table>
+	<div class="button_right cf"><div class="cssButtonPos8">{$BUTTON_SUBMIT}</div></div>
+	{$FORM_END}
+  </div>
+</div>

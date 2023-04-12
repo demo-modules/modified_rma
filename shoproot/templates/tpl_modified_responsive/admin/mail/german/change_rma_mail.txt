@@ -1,0 +1,12 @@
+
+Sehr geehrter {$NAME},
+
+Der Status Ihres RMA-Auftrags wurde ge&auml;ndert.
+
+{if $NOTIFY_COMMENTS}Anmerkungen und Kommentare zu Ihrem Auftrag:
+{$NOTIFY_COMMENTS}{/if}
+
+Neuer RMA-Status: {$RMA_STATUS}
+
+Bei Fragen zu Ihrem RMA-Auftrag antworten Sie bitte auf diese eMail.
+Sie können den Status ebenfalls unter Ihrem Kundenkonto nachschlagen.

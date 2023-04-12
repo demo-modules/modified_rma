@@ -1,0 +1,32 @@
+<div style="width:700px;margin: 0px auto;">
+<table width="700" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr> 
+    <td align="center" style="padding: 10px 0px;"><img src="{$tpl_path}img/logo.gif?t={$smarty.now}" /></td>
+  </tr>
+  <tr> 
+    <td style="font-size:14px;text-transform:uppercase;padding:10px 5px;border-top: 1px dotted #999;border-bottom: 1px dotted #999;">
+      <font face="Tahoma, Verdana, sans-serif">Ihr RMA-Auftrag</font>
+    </td>
+  </tr>
+  <tr> 
+    <td>
+      <br />
+      <table width="100%" border="0" cellspacing="0" cellpadding="5">
+        <tr>
+          <td valign="top">
+            <font size="2" face="Tahoma, Verdana, sans-serif">Hallo {$NAME},<br />
+            <br />der Status Ihres RMA-Auftrags wurde ge&auml;ndert.<br />
+            <br /><b>Neuer RMA-Status:</b> {$RMA_STATUS}<br />
+            {if $NOTIFY_COMMENTS}<br /><b>Anmerkungen und Kommentare zu diesem Vorgang:</b><br />
+            {$NOTIFY_COMMENTS}<br />{/if}
+            <br />Bei Fragen zu Ihrem RMA-Auftrag antworten Sie bitte auf diese eMail.<br />
+            <br />Sie k&ouml;nnen den Status ebenfalls unter Ihrer RMA-&Uuml;bersicht nachschlagen, welche Sie &uuml;ber Ihr Kundenkonto erreichen k&ouml;nnen.<br />
+            </font>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+[SIGNATUR]

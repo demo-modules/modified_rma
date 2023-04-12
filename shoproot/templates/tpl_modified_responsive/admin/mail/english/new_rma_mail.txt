@@ -1,0 +1,23 @@
+
+Sehr geehrter Administrator,
+
+es ist ein neuer RMA-Auftrag eingegangen.
+
+--------------------------------------------
+Kunde: {$CUSTOMER_NAME}
+ID: {$CUSTOMER_ID}
+Email: {$CUSTOMER_EMAIL}
+--------------------------------------------
+
+Betrifft Bestellung-Nr: BID-{$CUSTOMER_ORDER_ID}
+
+Produkt-ID: {$CUSTOMER_ORDER_PRODUCT_ID}
+Produktbezeichnung: {$CUSTOMER_ORDER_PRODUCT_NAME}
+
+Grund der Reklamation: {$CUSTOMER_REASON}
+Fehlerbeschreibung:
+--------------------------------------------
+{$CUSTOMER_ERROR}
+--------------------------------------------
+
+Eine genaue Auflistung aller Angaben finden Sie in der Administration.

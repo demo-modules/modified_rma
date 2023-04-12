@@ -1,0 +1,70 @@
+{config_load file="lang_`$language`_rma.custom"}
+
+<h1>{#heading_rma#}</h1>
+{if $success != 1}
+{$FORM_ACTION}
+{$ORDER_ID}
+
+{if $error!=''}
+  <div class="errormessage" >{$error}</div>
+{/if}
+
+<p><strong>{#text_step3_first#}</strong></p>
+
+<div class="twoColums">
+  <div class="highlightbox">
+    <h4>{#text_select_product#}</h4>
+	<table>
+	  <tr>
+	    <td colspan="2"><span class="fieldtext">{#text_products#}</span><span>{$CHOOSE_PRODUCTS_ID}</span></td>
+	  </tr>
+	  <tr>
+	    <td colspan="2"><span class="fieldtext">{#text_ean#}</span><span>{$EAN}</span></td>
+	  </tr>
+	</table>
+    <h4>{#text_select_shipping_time#}</h4>
+	<table>
+	  <tr>
+	    <td colspan="2"><span class="fieldtext">{#text_shipping_time#}</span><span>{$SHIPPING_TIME}</span></td>
+	  </tr>
+	</table>
+    <h4>{#text_select_options#}</h4>
+	<table>
+	  <tr>
+	  {if $PICK_UP}
+	    <td><span class="fieldtext">{#pick_up#}</span><span>{$PICK_UP_YES}&nbsp;{#pick_up_yes#}&nbsp;&nbsp;&nbsp;{$PICK_UP_NO}&nbsp;{#pick_up_no#}</span></td>
+	  {/if}
+	  {if $COST_ESTIMATE}
+	    <td><span class="fieldtext">{#cost_estimate#}</span><span>{$COST_ESTIMATE_YES}&nbsp;{#cost_estimate_yes#}&nbsp;&nbsp;&nbsp;{$COST_ESTIMATE_NO}&nbsp;{#cost_estimate_no#}</span></td>
+	  {/if}
+	  </tr>
+	</table>
+  </div>
+</div>
+<div class="twoColums last">
+  <div class="highlightbox">
+    <h4>{#text_select_reason_and_error#}</h4>
+	<table>
+	  <tr>
+	    <td colspan="2"><span class="fieldtext">{#text_reason#}</span><span>{$CHOOSE_REASON}</span></td>
+	  </tr>
+	  <tr>
+	    <td colspan="2"><span class="fieldtext">{#text_error_message#}</span><span>{$ERROR_MESSAGE}</span></td>
+	  </tr>
+	</table>
+	<p>{#text_info1#}</p>
+	<p>{#text_info2#}</p>
+  </div>
+</div>
+<div class="clear"></div>
+<div class="button_left cf"><div class="cssButtonPos9">{$BUTTON_BACK}</div></div>
+<div class="button_right cf"><div class="cssButtonPos8">{$BUTTON_SUBMIT}</div></div>
+{$FORM_END}
+{else}
+<div class="highlightbox">
+  <h4>{#text_rma_success_1#}</h4>
+  <p>{#text_rma_success_2#}</p>
+  <br class="clear" />
+  <div class="button_left cf"><div class="cssButtonPos9">{$BUTTON_BACK}</div></div>
+</div>
+{/if}

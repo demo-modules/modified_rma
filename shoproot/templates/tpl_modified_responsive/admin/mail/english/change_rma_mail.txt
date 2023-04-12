@@ -1,0 +1,12 @@
+
+Dear {$NAME} ,
+
+The status of your RMA-Order changed.
+
+{if $NOTIFY_COMMENTS}Comments:{$NOTIFY_COMMENTS}{/if}
+
+
+
+New status: {$RMA_STATUS}
+
+For questions, feel free to anwser to this mail.

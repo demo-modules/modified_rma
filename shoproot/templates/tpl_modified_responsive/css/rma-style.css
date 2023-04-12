@@ -1,0 +1,62 @@
+﻿
+
+/* BOF - RMA Modul 2.0 */
+
+div.rma_error {
+	padding-left: 5px; padding-top:5px;
+	margin: -10px 0px 20px 1px; /*o,x,u,l*/
+	background-color:#EDEDED;
+	border: solid #FF0000 1px;
+	width: 712px;
+	float:left;
+      font-family:Arial, Sans-serif; font-size:10px; color:#000;
+}
+
+
+div.rma_viewer {
+	margin:0;
+	padding:2%;
+	background-color:#EDEDED;
+	border: solid #ccc 0px;
+	float:left;
+      font-family:Arial, Sans-serif; font-size:12px; font-weight:bold; color:#893769;
+}
+div.rma_shower {
+	margin:0;
+	padding:2%;
+	height:33px;
+	background-color:#f8f8f8;
+	border: solid #d9d9d9 0px;
+	float:left;
+      font-family:Arial, Sans-serif; font-size:10px; font-weight:normal; color:#000;
+}
+
+table.rma_box {
+	width: 100%;
+}
+
+table.rma_box tr.header {
+	padding: 15px 10px 15px 10px;
+	font-size: 10px;
+    line-height: 18px;
+    color: #666666;
+    font-weight: 700;
+    border-bottom: 1px solid #ddd;
+}
+
+table.rma_box tr.row {
+	padding: 15px 10px 15px 10px;
+    line-height: 18px;
+    color: #666666;
+    font-weight: normal;
+    border-bottom: 1px solid #ddd;
+}
+
+
+
+.rma_choose {font-family: Verdana, Arial, sans-serif;font-size: 10px;color: #000000;backgroundcolor: #eeeeee;}
+.rma_table_heading {font-family: Verdana, Arial, sans-serif;font-size: 10px;color: #000000;background-color: #dddddd; padding-left:5px; height:18px;}
+.rma_table_content {font-family: Verdana, Arial, sans-serif;font-size: 10px;color: #000000;background-color:#f1f1f1; padding-left:5px; height:18px;}
+.rma_choose_body {font-family: Verdana, Arial, sans-serif;font-size: 10px;padding:5px;}
+.rma_options {font-family: Verdana, Arial, sans-serif;font-size: 10px;}
+/* EOF - RMA Modul 2.0 */
