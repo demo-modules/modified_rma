@@ -12,7 +12,7 @@ Ein ursprünglich 2006 von Southbridge.de erstelltes RMA-Modul, angepasst an die
 
 3. In der Datei /templates/tpl_modified_responsive/module/account.html folgende Zeile
 
-    <p><a href="{$LINK_ALL}">{#text_all#}</a></p>
+      <p><a href="{$LINK_ALL}">{#text_all#}</a></p>
 
   wie folgt erweitern:
   
