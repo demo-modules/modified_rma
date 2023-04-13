@@ -1,20 +1,38 @@
-<table  width="100%" border="0" align="center" cellpadding="4" cellspacing="0">
+<div style="width:700px;margin: 0px auto;">
+<table width="700" border="0" align="center" cellpadding="5" cellspacing="0">
   <tr> 
-    <td style="border-bottom: 1px solid; border-color: #cccccc;"><div align="right"><img src="{$logo_path}logo.gif"></div></td>
+    <td align="center" style="padding: 10px 0px;"><img src="{$tpl_path}img/logo.gif?t={$smarty.now}" /></td>
   </tr>
   <tr> 
-    <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong>Dear {$NAME}, </strong><br>
-      <br>
-The status of your RMA-Order changed.<br> 
-      {if $NOTIFY_COMMENTS}<br>
-Comments: 
-{$NOTIFY_COMMENTS}
-<br>
-{/if}
-<br>
-New status: 
-<b>{$RMA_STATUS}</b>
-<br>
-For questions, feel free to anwser to this mail. </font></td>
+    <td style="font-size:14px;text-transform:uppercase;padding:10px 5px;border-top: 1px dotted #999;border-bottom: 1px dotted #999;">
+      <font face="Tahoma, Verdana, sans-serif">Your RMA Order</font>
+    </td>
   </tr>
+  <tr> 
+    <td>
+      <br />
+      <table width="100%" border="0" cellspacing="0" cellpadding="5">
+        <tr>
+          <td valign="top">
+            <font size="2" face="Tahoma, Verdana, sans-serif">Dear {$NAME},<br />
+            <br />the status of your RMA-Order changed.<br />
+            <br /><b>New RMA-Status:</b> {$RMA_STATUS}<br />
+            {if $NOTIFY_COMMENTS}<br /><b>Comments:</b><br />
+            {$NOTIFY_COMMENTS}<br />{/if}
+            <br />For questions, feel free to anwser to this mail.<br />
+            <br />You can also look up the status under your RMA summary, which you can access from your customer account.<br />
+            </font>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr> 
+    <td>
+      <br />
+      [SIGNATUR]
+    </td>
+  </tr>  
 </table>
+</div>
+
