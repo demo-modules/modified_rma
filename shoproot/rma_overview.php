@@ -52,13 +52,17 @@ if (defined('MODULE_MODIFIED_RMA_STATUS') && MODULE_MODIFIED_RMA_STATUS == 'true
 		$smarty->assign('FORM_END', '</form>');
 	
 		$rma_overview_array = array();
-		$rma_query = xtc_db_query("SELECT rma_id, rma_date, rma_status_id FROM ".TABLE_RMA." WHERE customers_id = '".(int)$_SESSION['customer_id']."' ORDER BY rma_id DESC");
+		$rma_query = xtc_db_query("SELECT rma_id, rma_date, 
+						  rma_status_id 
+					     FROM ".TABLE_RMA." 
+					    WHERE customers_id = '".(int)$_SESSION['customer_id']."' 
+					 ORDER BY rma_id DESC");
 		
 		while($rma_overview = xtc_db_fetch_array($rma_query)){
 		
 			$rma_overview_array[] = array(
-				'RMA_ID' 		=> $rma_overview['rma_id'],
-				'RMA_DATE' 		=> xtc_date_short($rma_overview['rma_date']),
+				'RMA_ID' 	=> $rma_overview['rma_id'],
+				'RMA_DATE' 	=> xtc_date_short($rma_overview['rma_date']),
 				'RMA_STATUS' 	=> sb_get_status($rma_overview['rma_status_id']),
 				'RMA_ACTION' 	=> '<a href="'.xtc_href_link(FILENAME_RMA_REQUEST, 'rma_id='.$rma_overview['rma_id'], 'SSL').'">'.RMA_TEXT_SHOW.'</a>');
 		}
