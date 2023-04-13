@@ -16,11 +16,12 @@
    License:			Released under the GNU General Public License 2
 ------------------------------------------------------------------------------------------*/
 
-include('includes/application_top.php');
+include ('includes/application_top.php');
 
 // include needed functions
-require_once(DIR_FS_INC.'sb_get_rma_status.inc.php');
-require_once(DIR_FS_INC.'xtc_date_short.inc.php');
+require_once (DIR_FS_INC.'sb_get_rma_status.inc.php');
+require_once (DIR_FS_INC.'xtc_date_short.inc.php');
+require_once (DIR_FS_INC.'xtc_draw_pull_down_menu.inc.php');
 
 if (!isset($_SESSION['customer_id'])) {
 	xtc_redirect(xtc_href_link(FILENAME_LOGIN, '', 'SSL'));
@@ -29,14 +30,13 @@ if (!isset($_SESSION['customer_id'])) {
 $smarty = new Smarty;
 require (DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/source/boxes.php');
 
-require_once(DIR_FS_INC.'xtc_draw_pull_down_menu.inc.php');
 $breadcrumb->add(NAVBAR_TITLE_RMA_OVERVIEW, xtc_href_link(FILENAME_RMA_OVERVIEW, '', 'SSL'));
 
 require (DIR_WS_INCLUDES.'header.php');
 
 if (defined('MODULE_MODIFIED_RMA_STATUS') && MODULE_MODIFIED_RMA_STATUS == 'true') {
 
-	if(isset($_SESSION['customer_id'])){
+	if (isset($_SESSION['customer_id'])) {
 		$smarty->assign('language', $_SESSION['language']);
 		$orders_query = xtc_db_query("SELECT orders_id, DATE_FORMAT(date_purchased , '%d.%m.%Y') AS DATE FROM ".TABLE_ORDERS." WHERE customers_id = '".(int) $_SESSION['customer_id']."' ORDER BY orders_id DESC");
 	
