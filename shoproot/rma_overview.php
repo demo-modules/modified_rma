@@ -58,7 +58,7 @@ if (defined('MODULE_MODIFIED_RMA_STATUS') && MODULE_MODIFIED_RMA_STATUS == 'true
 					    WHERE customers_id = '".(int)$_SESSION['customer_id']."' 
 					 ORDER BY rma_id DESC");
 		
-		while($rma_overview = xtc_db_fetch_array($rma_query)){
+		while ($rma_overview = xtc_db_fetch_array($rma_query)) {
 		
 			$rma_overview_array[] = array(
 				'RMA_ID' 	=> $rma_overview['rma_id'],
